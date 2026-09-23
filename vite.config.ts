@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: './', // Ensures relative paths for GitHub Pages hosting (e.g. username.github.io/repo)
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/grafikartstudio/' : '/',
   plugins: [
     react(),
     tailwindcss(),
   ],
-})
+}))

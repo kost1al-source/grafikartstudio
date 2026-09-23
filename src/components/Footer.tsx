@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, MapPin, ArrowUp, MessageCircle } from 'lucide-react';
 import { InstagramIcon } from './icons/InstagramIcon';
 import type { ContentData } from '../data/content';
+import { getAssetUrl } from '../utils/asset';
 
 interface FooterProps {
   content: ContentData;
@@ -23,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ content }) => {
             <a href="#" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-sky-500/30">
                 <img
-                  src="/assets/logo.jpg"
+                  src={getAssetUrl('assets/logo.jpg')}
                   alt="GraphicArt Studio Logo"
                   className="w-full h-full object-cover"
                 />

@@ -3,6 +3,7 @@ import { Heart, MessageSquare, ExternalLink, Send } from 'lucide-react';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { Reveal } from './Reveal';
 import type { ContentData } from '../data/content';
+import { getAssetUrl } from '../utils/asset';
 
 interface InstagramFeedProps {
   content: ContentData;
@@ -19,42 +20,42 @@ interface IgPost {
 export const InstagramFeed: React.FC<InstagramFeedProps> = ({ content }) => {
   const posts: IgPost[] = [
     {
-      image: '/assets/hero_signage.jpg',
+      image: getAssetUrl('assets/hero_signage.jpg'),
       caption: '💡 Nová 3D světelná vývěska s teplým LED podsvícením v centru Liberce. Akryl + hliník na míru.',
       likes: 68,
       comments: 7,
       tag: '#vyvesky #liberec',
     },
     {
-      image: '/assets/car_wrap.jpg',
+      image: getAssetUrl('assets/car_wrap.jpg'),
       caption: '🚗 Kompletní firemní polep dodávky Sprinter. Litá fólie Oracal s matnou UV laminací.',
       likes: 94,
       comments: 12,
       tag: '#polepyaut #reklama',
     },
     {
-      image: '/assets/aluminum_print.jpg',
+      image: getAssetUrl('assets/aluminum_print.jpg'),
       caption: '🖼 HD obraz na kartáčovaném hliníku Dibond. Neuvěřitelný metalický lesk v moderním interiéru.',
       likes: 112,
       comments: 15,
       tag: '#obrazy #dibond',
     },
     {
-      image: '/assets/window_wrap.jpg',
+      image: getAssetUrl('assets/window_wrap.jpg'),
       caption: '☕ Polep výlohy kavárny — pískovaná fólie s privátním efektem + zlaté řezané logo na sklo.',
       likes: 57,
       comments: 6,
       tag: '#vylohy #design',
     },
     {
-      image: '/assets/apparel_glass.jpg',
+      image: getAssetUrl('assets/apparel_glass.jpg'),
       caption: '👕 Textil & 🍷 sklo! Firemní trička s přesným tiskem a laserem gravírované sklenice s logem.',
       likes: 73,
       comments: 9,
       tag: '#merch #potisk',
     },
     {
-      image: '/assets/photozone_decor.jpg',
+      image: getAssetUrl('assets/photozone_decor.jpg'),
       caption: '📸 3D prostorová fotozóna pro slavnostní večer. Světelné nápisy a moderní dekor.',
       likes: 85,
       comments: 11,
@@ -91,7 +92,7 @@ export const InstagramFeed: React.FC<InstagramFeedProps> = ({ content }) => {
               <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5">
                 <div className="relative w-20 h-20 rounded-2xl p-1 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shadow-xl shrink-0">
                   <img
-                    src="/assets/logo.jpg"
+                    src={getAssetUrl('assets/logo.jpg')}
                     alt="@graphic_art_studio"
                     className="w-full h-full object-cover rounded-xl border-2 border-black"
                   />

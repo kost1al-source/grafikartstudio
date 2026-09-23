@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import { Reveal } from './Reveal';
 import type { ContentData } from '../data/content';
+import { getAssetUrl } from '../utils/asset';
 
 interface AboutSectionProps {
   content: ContentData;
@@ -26,7 +27,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
 
                 <div className="relative rounded-2xl overflow-hidden glass-panel border border-slate-700/80 shadow-2xl">
                   <img
-                    src="/assets/workshop_uv.jpg"
+                    src={getAssetUrl('assets/workshop_uv.jpg')}
                     alt="Výroba a tisk GraphicArt Studio Liberec"
                     className="w-full aspect-[4/3] object-cover"
                   />
@@ -35,7 +36,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl overflow-hidden ring-2 ring-sky-500/40 shrink-0">
                         <img
-                          src="/assets/logo.jpg"
+                          src={getAssetUrl('assets/logo.jpg')}
                           alt="Yeliena Loboda GraphicArt Studio"
                           className="w-full h-full object-cover"
                         />

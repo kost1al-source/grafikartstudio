@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, ExternalLink, Sparkles } from 'lucide-react';
 import { Reveal } from './Reveal';
 import type { ContentData } from '../data/content';
+import { getAssetUrl } from '../utils/asset';
 
 interface HeroProps {
   content: ContentData;
@@ -105,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                 <div className="relative rounded-2xl overflow-hidden glass-panel border border-slate-700/80 shadow-2xl">
                   <div className="relative aspect-[4/3] overflow-hidden group">
                     <img
-                      src="/assets/hero_signage.jpg"
+                      src={getAssetUrl('assets/hero_signage.jpg')}
                       alt="Světelná vývěska Aurora and Co — ukázka realizace GraphicArt Studio"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />

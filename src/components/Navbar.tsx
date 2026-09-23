@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 import type { ContentData } from '../data/content';
+import { getAssetUrl } from '../utils/asset';
 
 interface NavbarProps {
   content: ContentData;
@@ -43,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ content, lang, setLang }) => {
           <a href="#" className="flex items-center gap-3.5 group">
             <div className="relative w-11 h-11 rounded-xl overflow-hidden ring-1 ring-sky-500/30 group-hover:ring-sky-400 transition-all duration-300 shadow-lg shadow-sky-950/50">
               <img
-                src="/assets/logo.jpg"
+                src={getAssetUrl('assets/logo.jpg')}
                 alt="GraphicArt Studio Logo"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
